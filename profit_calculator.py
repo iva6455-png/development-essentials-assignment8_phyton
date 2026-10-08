@@ -19,3 +19,14 @@ else:
     print("Margin cannot be calculated: revenue is zero.")
 
 print("Profitable:", profit > 0)
+
+print("\n--- Additional analysis by zucksa ---")
+
+profit_per_unit = sale_price - purchase_price
+print("Profit per unit:", round(profit_per_unit, 2))
+
+if purchase_price != 0:
+    markup = profit_per_unit / purchase_price * 100
+    print("Markup:", round(markup, 2), "%")
+else:
+    print("Markup cannot be calculated: purchase price is zero.")
